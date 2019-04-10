@@ -27,7 +27,7 @@
               <input type="text" class="form-control" name="name"/>
           </div>
           <div class="form-group">
-              <label for="price">Price :</label>
+              <label for="price">Price of product:</label>
               <input type="text" class="form-control" name="price"/>
           </div>
           <div class="form-group">
