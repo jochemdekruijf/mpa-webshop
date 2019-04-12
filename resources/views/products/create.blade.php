@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layouts.layout');
 
-@section('content')
+@section('content');
 <style>
   .uper {
     margin-top: 40px;
@@ -8,7 +8,7 @@
 </style>
 <div class="card uper">
   <div class="card-header">
-    Add Share
+    Add product
   </div>
   <div class="card-body">
     @if ($errors->any())
@@ -21,18 +21,19 @@
       </div><br />
     @endif
       <form method="post" action="{{ route('products.store') }}">
+         @csrf 
           <div class="form-group">
-              @csrf
-              <label for="name">product name:</label>
-              <input type="text" class="form-control" name="name"/>
+               
+              <label for="product_name">product name:</label>
+              <input type="text" class="form-control" name="product_name"/>
           </div>
           <div class="form-group">
-              <label for="price">Price of product:</label>
-              <input type="text" class="form-control" name="price"/>
+              <label for="product_price">Price of product:</label>
+              <input type="text" class="form-control" name="product_price"/>
           </div>
           <div class="form-group">
-              <label for="quantity">Quantity:</label>
-              <input type="text" class="form-control" name="qty"/>
+              <label for="product_qty">Quantity:</label>
+              <input type="text" class="form-control" name="product_qty"/>
           </div>
           <button type="submit" class="btn btn-primary">Add</button>
       </form>
