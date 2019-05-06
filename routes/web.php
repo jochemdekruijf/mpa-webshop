@@ -17,5 +17,21 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('products', 'ProductController');
+/*
+GET           /users                      index   users.index
+GET           /users/create               create  users.create
+POST          /users                      store   users.store
+GET           /users/{user}               show    users.show
+GET           /users/{user}/edit          edit    users.edit
+PUT|PATCH     /users/{user}               update  users.update
+DELETE        /users/{user}               destroy users.destroy
+*/
+
+Route::get('products', 'ProductController@index')->name('products.index');
+Route::get('products/create', 'ProductController@create')->name('products.create');
+Route::post('products', 'ProductController@store')->name('products.store');
+Route::get('products/{id}/edit', 'ProductController@edit')->name('products.edit');
+Route::delete('products/{id}', 'ProductController@destroy')->name('products.destroy');
+
+//Route::resource('products', 'ProductController');
 

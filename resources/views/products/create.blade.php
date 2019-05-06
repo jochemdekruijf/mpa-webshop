@@ -21,7 +21,7 @@
       </div><br />
     @endif
       <form method="post" action="{{ route('products.store') }}">
-         @csrf 
+      {!! csrf_field() !!}
           <div class="form-group">
                
               <label for="product_name">product name:</label>

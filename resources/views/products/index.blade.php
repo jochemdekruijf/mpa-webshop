@@ -12,6 +12,11 @@
       {{ session()->get('success') }}  
     </div><br />
   @endif
+
+  	<nav class="nav">
+		<a class="nav-link" href="{{ URL::to('products/create') }}">Add new product</a>
+</nav>
+
   <table class="table table-striped">
     <thead>
         <tr>
@@ -32,8 +37,11 @@
             <td><a href="{{ route('products.edit',$product->id)}}" class="btn btn-primary">Edit</a></td>
             <td>
                 <form action="{{ route('products.destroy', $product->id)}}" method="post">
-                  @csrf
-                  @method('DELETE')
+                  <!-- @csrf -->
+                  {!! csrf_field() !!}
+                  <!-- @method('DELETE') -->
+                  {{method_field('DELETE')}} 
+
                   <button class="btn btn-danger" type="submit">Delete</button>
                 </form>
             </td>
