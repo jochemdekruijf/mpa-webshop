@@ -20,7 +20,7 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="{{ route('products.store') }}">
+      <form method="post" action="{{ route('products.update') }}">
       {!! csrf_field() !!}
           <div class="form-group">
                

@@ -6,6 +6,14 @@
     margin-top: 40px;
   }
 </style>
+
+
+<nav class="navbar navbar-light bg-primary">
+  <a class="navbar-brand" href="?">
+    <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Bootstrap-Logo-PNG-715x715.png" width="30" height="30" alt="">
+  </a>
+</nav>
+
 <div class="uper">
   @if(session()->get('success'))
     <div class="alert alert-success">
@@ -22,13 +30,29 @@
         <tr>
           <td>ID</td>
           <td>product Name</td>
-          <td>product Price</td>
+          <td>Price</td>
           <td>product Quantity</td>
           <td colspan="2">Action</td>
         </tr>
     </thead>
     <tbody>
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+
+
+
+
+
+
         @foreach($products as $product)
+        
         <tr>
             <td>{{$product->id}}</td>
             <td>{{$product->product_name}}</td>
